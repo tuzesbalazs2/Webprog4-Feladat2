@@ -112,7 +112,7 @@ getPosts = async (req, res) => {
                 .status(404)
                 .json({ success: false, error: `Post not found` })
         }
-        return res.status(200).json({ success: true, data: post })
+        return res.status(200).json({ success: true, data: posts })
     }).catch(err => console.log(err))
 }
 

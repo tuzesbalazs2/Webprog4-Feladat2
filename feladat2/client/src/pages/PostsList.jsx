@@ -41,7 +41,7 @@ class Deletepost extends Component {
                 `Do tou want to delete the post ${this.props.id} permanently?`,
             )
         ) {
-            api.deletepostById(this.props.id)
+            api.deletePostById(this.props.id)
             window.location.reload()
         }
     }
