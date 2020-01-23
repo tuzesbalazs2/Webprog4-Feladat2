@@ -66,7 +66,7 @@ class PostsInsert extends Component {
         const payload = { user_id, title, text }
 
         await api.insertPost(payload).then(res => {
-            window.alert(`Post inserted successfully`)
+            window.alert(`Bejegyzés sikeresen hozzáadva.`)
             this.setState({
                 user_id: '',
                 title: '',
@@ -79,31 +79,31 @@ class PostsInsert extends Component {
         const { user_id, title, text } = this.state
         return (
             <Wrapper>
-                <Title>Create Post</Title>
+                <Title>Bejegyzés hozzáadása</Title>
 
-                <Label>User ID: </Label>
+                <Label>Felhasználó: </Label>
                 <InputText
                     type="text"
                     value={user_id}
                     onChange={this.handleChangeInputUser_id}
                 />
 
-                <Label>Title: </Label>
+                <Label>Cím: </Label>
                 <InputText
                     type="text"
                     value={title}
                     onChange={this.handleChangeInputTitle}
                 />
 
-                <Label>Text: </Label>
+                <Label>Szöveg: </Label>
                 <InputText
                     type="text"
                     value={text}
                     onChange={this.handleChangeInputText}
                 />
 
-                <Button onClick={this.handleIncludePost}>Add Post</Button>
-                <CancelButton href={'/Posts/list'}>Cancel</CancelButton>
+                <Button onClick={this.handleIncludePost}>Bejegyzés hozzáadása</Button>
+                <CancelButton href={'/Posts/list'}>Mégse</CancelButton>
             </Wrapper>
         )
     }

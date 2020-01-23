@@ -67,7 +67,7 @@ class PostsUpdate extends Component {
         const payload = { user_id, title, text }
 
         await api.updatePostById(id, payload).then(res => {
-            window.alert(`Post updated successfully`)
+            window.alert(`Bejegyzés sikeresen módosítva.`)
             this.setState({
                 user_id: '',
                 title: '',
@@ -91,31 +91,31 @@ class PostsUpdate extends Component {
         const { user_id, title, text } = this.state
         return (
             <Wrapper>
-                <Title>Create Post</Title>
+                <Title>Bejegyzés módosítása</Title>
 
-                <Label>User ID: </Label>
+                <Label>Felhasználó: </Label>
                 <InputText
                     type="text"
                     value={user_id}
                     onChange={this.handleChangeInputName}
                 />
 
-                <Label>Title: </Label>
+                <Label>Cím: </Label>
                 <InputText
                     type="text"
                     value={title}
                     onChange={this.handleChangeInputName}
                 />
 
-                <Label>Text: </Label>
+                <Label>Szöveg: </Label>
                 <InputText
                     type="text"
                     value={text}
                     onChange={this.handleChangeInputTime}
                 />
 
-                <Button onClick={this.handleUpdatePost}>Update Post</Button>
-                <CancelButton href={'/posts/list'}>Cancel</CancelButton>
+                <Button onClick={this.handleUpdatePost}>Bejegyzés módosítása</Button>
+                <CancelButton href={'/posts/list'}>Mégse</CancelButton>
             </Wrapper>
         )
     }

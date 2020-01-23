@@ -19,18 +19,18 @@ class Links extends Component {
         return (
             <React.Fragment>
                 <Link to="/" className="navbar-brand">
-                    Portfolio Page
+                    Portfólió oldal
                 </Link>
                 <Collapse>
                     <List>
                         <Item>
                             <Link to="/posts/list" className="nav-link">
-                                Posts
+                                Bejegyzések
                             </Link>
                         </Item>
                         <Item>
                             <Link to="/posts/create" className="nav-link">
-                                Create Posts
+                                Új bejegyzés
                             </Link>
                         </Item>
                     </List>

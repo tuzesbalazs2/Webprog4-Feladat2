@@ -11,7 +11,7 @@ const Wrapper = styled.div`
 `
 
 const Update = styled.div`
-    color: #ef9b0f;
+    color: #0000ff;
     cursor: pointer;
 `
 
@@ -28,7 +28,7 @@ class Updatepost extends Component {
     }
 
     render() {
-        return <Update onClick={this.updateUser}>Update</Update>
+        return <Update onClick={this.updateUser}>Módosítás</Update>
     }
 }
 
@@ -38,7 +38,7 @@ class Deletepost extends Component {
 
         if (
             window.confirm(
-                `Do you want to delete the post ${this.props.id} permanently?`,
+                `Ki akarja törölni ezt a bejegyzést véglegesen?: ${this.props.id}`,
             )
         ) {
             api.deletePostById(this.props.id)
@@ -47,7 +47,7 @@ class Deletepost extends Component {
     }
 
     render() {
-        return <Delete onClick={this.deleteUser}>Delete</Delete>
+        return <Delete onClick={this.deleteUser}>Törlés</Delete>
     }
 }
 
@@ -83,17 +83,17 @@ class postsList extends Component {
                 filterable: true,
             },
             {
-                Header: 'User ID',
+                Header: 'Felhasználó',
                 accessor: 'user_id',
                 filterable: true,
             },
             {
-                Header: 'Title',
+                Header: 'Cím',
                 accessor: 'title',
                 filterable: true,
             },
             {
-                Header: 'text',
+                Header: 'Szöveg',
                 accessor: 'text',
                 filterable: true,
             },
@@ -136,6 +136,15 @@ class postsList extends Component {
                         defaultPageSize={10}
                         showPageSizeOptions={true}
                         minRows={0}
+                        previousText={"Előző oldal"}
+                        nextText={"Következő oldal"}
+                        loadingText={"Várjon---"}
+                        noDataText={"Nincs bejegyzés"}
+                        pageText={"Oldal"}
+                        ofText={"ennyiből:"}
+                        rowsText={"sor"}
+                        pageJumpText={"ugrás erre az oldalra"}
+                        rowsSelectorText={"sorok oldalanként"}
                     />
                 )}
             </Wrapper>
