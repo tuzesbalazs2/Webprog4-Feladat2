@@ -38,7 +38,7 @@ class Deletepost extends Component {
 
         if (
             window.confirm(
-                `Do tou want to delete the post ${this.props.id} permanently?`,
+                `Do you want to delete the post ${this.props.id} permanently?`,
             )
         ) {
             api.deletePostById(this.props.id)
