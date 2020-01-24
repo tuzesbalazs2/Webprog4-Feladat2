@@ -28,7 +28,7 @@ class Updatepost extends Component {
     }
 
     render() {
-        return <Update onClick={this.updateUser}>Módosítás</Update>
+        return <Update onClick={this.updateUser}><b>Módosítás</b></Update>
     }
 }
 
@@ -47,7 +47,7 @@ class Deletepost extends Component {
     }
 
     render() {
-        return <Delete onClick={this.deleteUser}>Törlés</Delete>
+        return <Delete onClick={this.deleteUser}><b>Törlés</b></Delete>
     }
 }
 

@@ -4,7 +4,7 @@ class Landing extends Component {
   render() {
     return (
       <div style={{ height: "75vh" }} className="container valign-wrapper">
-        <div className="row">
+        <div className="row mx-auto">
           <div className="col s12 center-align">
             <h4>
               <b>Bla</b> bla{" "}
@@ -22,9 +22,9 @@ class Landing extends Component {
                   borderRadius: "3px",
                   letterSpacing: "1.5px"
                 }}
-                className="btn btn-large waves-effect waves-light hoverable blue accent-3"
+                className="btn btn-large waves-effect waves-light hoverable blue accent-3 align-middle"
               >
-                Regisztrálás
+                <div className="mt-2 text-white">Regisztrálás</div>
               </Link>
             </div>
             <div className="col s6">
@@ -35,9 +35,9 @@ class Landing extends Component {
                   borderRadius: "3px",
                   letterSpacing: "1.5px"
                 }}
-                className="btn btn-large btn-flat waves-effect white black-text"
+                className="btn btn-large btn-flat waves-effect white black-text align-middle"
               >
-                Bejelentkezés
+                <div className="mt-2">Bejelentkezés</div>
               </Link>
             </div>
           </div>
