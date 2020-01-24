@@ -23,11 +23,11 @@ app.get('/', (req, res) => {
 
 app.use('/api', postRouter)
 
-// Passport middleware
+
 app.use(passport.initialize());
-// Passport config
+
 require("./config/passport")(passport);
-// Routes
+
 app.use("/api/users", users);
 
 app.listen(apiPort, () => console.log(`A szerver a következő porton fut: ${apiPort}`))
