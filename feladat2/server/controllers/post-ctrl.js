@@ -6,7 +6,7 @@ createPost = (req, res) => {
     if (!body) {
         return res.status(400).json({
             success: false,
-            error: 'You must provide a post',
+            error: 'Nincs bejegyzés beírva',
         })
     }
 
@@ -22,13 +22,13 @@ createPost = (req, res) => {
             return res.status(201).json({
                 success: true,
                 id: post._id,
-                message: 'Post has been created!',
+                message: 'A bejegyzés hozzáadva!',
             })
         })
         .catch(error => {
             return res.status(400).json({
                 error,
-                message: 'Post has not been created!',
+                message: 'A bejegyzés NINCS HOZZÁADVA!',
             })
         })
 }
@@ -39,7 +39,7 @@ updatePost = async (req, res) => {
     if (!body) {
         return res.status(400).json({
             success: false,
-            error: 'You must provide a body to update',
+            error: 'Be kell írni szöveget amire módosuljon',
         })
     }
 
@@ -47,7 +47,7 @@ updatePost = async (req, res) => {
         if (err) {
             return res.status(404).json({
                 err,
-                message: 'Post not found!',
+                message: 'A bejegyzés nem található!',
             })
         }
         post.user_id = body.user_id
@@ -59,13 +59,13 @@ updatePost = async (req, res) => {
                 return res.status(200).json({
                     success: true,
                     id: post._id,
-                    message: 'Post has been updated!',
+                    message: 'A bejegyzés módosításra került!',
                 })
             })
             .catch(error => {
                 return res.status(404).json({
                     error,
-                    message: 'Post has not been updated!',
+                    message: 'A bejegyzés NEM került módosításara!',
                 })
             })
     })
@@ -80,7 +80,7 @@ deletePost = async (req, res) => {
         if (!post) {
             return res
                 .status(404)
-                .json({ success: false, error: `Post not found` })
+                .json({ success: false, error: `Nem található a bejegyzés` })
         }
 
         return res.status(200).json({ success: true, data: post })
@@ -96,7 +96,7 @@ getPostById = async (req, res) => {
         if (!post) {
             return res
                 .status(404)
-                .json({ success: false, error: `Post not found` })
+                .json({ success: false, error: `Nem található a bejegyzés` })
         }
         return res.status(200).json({ success: true, data: post })
     }).catch(err => console.log(err))
@@ -110,7 +110,7 @@ getPosts = async (req, res) => {
         if (!posts.length) {
             return res
                 .status(404)
-                .json({ success: false, error: `Post not found` })
+                .json({ success: false, error: `Nem található a bejegyzés` })
         }
         return res.status(200).json({ success: true, data: posts })
     }).catch(err => console.log(err))
