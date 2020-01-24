@@ -64,7 +64,7 @@ class Login extends Component {
                 <b>Bejelentkezés</b>
               </h4>
               <p className="grey-text text-darken-1">
-                Nincs profilod? <Link to="/register">regisztráljál</Link>
+                Nincs profilod? <Link to="/register">Regisztrálj!</Link>
               </p>
             </div>
             <form noValidate onSubmit={this.onSubmit}>

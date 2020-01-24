@@ -64,7 +64,7 @@ class Register extends Component {
                 <b>Regisztrálás</b>
               </h4>
               <p className="grey-text text-darken-1">
-                Már van profilod? Akkor <Link to="/login">Bejelentkezzél</Link>
+                Már van profilod? Akkor <Link to="/login">Jelentkezz be!</Link>
               </p>
             </div>
             <form noValidate onSubmit={this.onSubmit}>

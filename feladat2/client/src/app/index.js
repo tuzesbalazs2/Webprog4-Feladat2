@@ -46,8 +46,8 @@ function App() {
             <NavBar />
             <Switch>
                 <Route path="/posts/list" exact component={PostsList} />
-                <Route path="/posts/create" exact component={PostsInsert} />
-                <Route
+                <PrivateRoute path="/posts/create" exact component={PostsInsert} />
+                <PrivateRoute
                     path="/posts/update/:id"
                     exact
                     component={PostsUpdate}
@@ -57,7 +57,7 @@ function App() {
                 <Route exact path="/login" component={Login} />
                 <PrivateRoute exact path="/dashboard" component={Dashboard} />
             </Switch>
-            <Landing />
+            
         </Router>
         </Provider>
     )

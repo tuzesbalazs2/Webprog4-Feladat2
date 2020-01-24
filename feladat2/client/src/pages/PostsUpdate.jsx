@@ -97,21 +97,21 @@ class PostsUpdate extends Component {
                 <InputText
                     type="text"
                     value={user_id}
-                    onChange={this.handleChangeInputName}
+                    onChange={this.handleChangeInputUser_id}
                 />
 
                 <Label>Cím: </Label>
                 <InputText
                     type="text"
                     value={title}
-                    onChange={this.handleChangeInputName}
+                    onChange={this.handleChangeInputTitle}
                 />
 
                 <Label>Szöveg: </Label>
                 <InputText
                     type="text"
                     value={text}
-                    onChange={this.handleChangeInputTime}
+                    onChange={this.handleChangeInputText}
                 />
 
                 <Button onClick={this.handleUpdatePost}>Bejegyzés módosítása</Button>

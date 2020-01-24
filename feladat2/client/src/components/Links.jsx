@@ -33,6 +33,16 @@ class Links extends Component {
                                 Új bejegyzés
                             </Link>
                         </Item>
+                                                <Item>
+                            <Link to="/login" className="nav-link">
+                                Bejelentkezés
+                            </Link>
+                        </Item>
+                        <Item>
+                            <Link to="/register" className="nav-link">
+                                Regisztráció
+                            </Link>
+                        </Item>
                     </List>
                 </Collapse>
             </React.Fragment>
