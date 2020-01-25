@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { logoutUser } from "../../actions/authActions";
+import { Link } from "react-router-dom";
 
 class Dashboard extends Component {
   onLogoutClick = e => {
@@ -17,10 +18,9 @@ class Dashboard extends Component {
         <div className="row align-middle mx-auto">
           <div className="landing-copy col s12 center-align">
             <h4>
-              <b>Bejelentkezve mint</b> {user.name}
+              <b>Bejelentkezve, mint</b> {user.name}
               <p className="flow-text grey-text text-darken-1">
-                Bla{" "}
-                <span style={{ fontFamily: "monospace" }}>BLA</span> bla 👏
+                <Link to="/posts/list">Böngéssz</Link> a bejegyzések között vagy hozz létre <Link to="/posts/create">új bejegyzést</Link>!
               </p>
             </h4>
             <button

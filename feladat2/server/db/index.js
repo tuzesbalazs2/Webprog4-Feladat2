@@ -1,7 +1,8 @@
 const mongoose = require('mongoose')
+const dburi = require("../config/database").mongoURI;
 
 mongoose
-    .connect('mongodb://127.0.0.1:27017/portfolio', { useNewUrlParser: true })
+    .connect(dburi, { useNewUrlParser: true })
     .catch(e => {
         console.error('Connection error', e.message)
     })

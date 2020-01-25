@@ -7,11 +7,13 @@ class Landing extends Component {
         <div className="row mx-auto">
           <div className="col s12 center-align">
             <h4>
-              <b>Bla</b> bla{" "}
-              <span style={{ fontFamily: "monospace" }}>bLA</span> bla
+              <b>Üdvözöllek portfolió oldalunkon!</b>
             </h4>
             <p className="flow-text grey-text text-darken-1">
-              Bla
+                    Ezen a weboldalon szöveges bejegyzéseket hozhatsz létre. <br />
+                    A <Link to="/posts/list">Bejegyzések</Link> gombra kattintva megnézheted az összes eddig készített bejegyzést. <br />
+                    A <Link to="/login">Bejelentkezés</Link> gombra kattintva be tudsz jelentkezni az oldalra. <br />
+                    Amennyiben még nem regisztráltál a weboldalunkra a <Link to="/register">Regisztráció</Link> gombra kattintás után tudod megtenni azt. <br />
             </p>
             <br />
             <div className="col s6">
