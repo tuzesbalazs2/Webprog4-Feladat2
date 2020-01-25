@@ -5,6 +5,7 @@ import api from '../api'
 import styled from 'styled-components'
 
 import 'react-table-6/react-table.css'
+import PropTypes from "prop-types";
 
 const Wrapper = styled.div`
     padding: 0 40px 40px 40px;
@@ -105,6 +106,7 @@ class postsList extends Component {
                         <span>
                             <Deletepost id={props.original._id} />
                         </span>
+
                     )
                 },
             },

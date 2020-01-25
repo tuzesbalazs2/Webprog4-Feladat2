@@ -14,7 +14,7 @@ class Dashboard extends Component {
 
     return (
       <div style={{ height: "75vh" }} className="container valign-wrapper">
-        <div className="row">
+        <div className="row align-middle mx-auto">
           <div className="landing-copy col s12 center-align">
             <h4>
               <b>Bejelentkezve mint</b> {user.name}
@@ -31,7 +31,7 @@ class Dashboard extends Component {
                 marginTop: "1rem"
               }}
               onClick={this.onLogoutClick}
-              className="btn btn-large waves-effect waves-light hoverable blue accent-3"
+              className="btn btn-large waves-effect waves-light hoverable blue accent-3 text-white"
             >
               KIjelentkezés
             </button>
