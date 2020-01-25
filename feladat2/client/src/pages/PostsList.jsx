@@ -5,7 +5,10 @@ import api from '../api'
 import styled from 'styled-components'
 
 import 'react-table-6/react-table.css'
-import PropTypes from "prop-types";
+
+
+
+
 
 const Wrapper = styled.div`
     padding: 0 40px 40px 40px;
@@ -36,7 +39,7 @@ class Updatepost extends Component {
 class Deletepost extends Component {
     deleteUser = event => {
         event.preventDefault()
-
+        if (localStorage.jwtToken) {
         if (
             window.confirm(
                 `Ki akarja törölni ezt a bejegyzést véglegesen?: ${this.props.id}`,
@@ -45,6 +48,8 @@ class Deletepost extends Component {
             api.deletePostById(this.props.id)
             window.location.reload()
         }
+        }
+        else{window.location.href = `/login`}
     }
 
     render() {
@@ -106,7 +111,6 @@ class postsList extends Component {
                         <span>
                             <Deletepost id={props.original._id} />
                         </span>
-
                     )
                 },
             },
